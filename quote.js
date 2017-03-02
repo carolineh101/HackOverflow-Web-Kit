@@ -8,4 +8,4 @@ quotes.push('If you know you are on the right track, if you have this inner know
 quotes.push('Forget this world and all its troubles and if possible its multitudinous Charlatans-- everything in short but the Enchantress of Numbers. – Ada Lovelace');
  
 var randNum = Math.floor(Math.random() * (numQuotes));
-document.getElementById("quote").innerHTML = quotes[randNum];
+document.getElementById('quote').innerHTML = quotes[randNum];

@@ -13,6 +13,13 @@ h2 {
 	font-size: 40px;
 }
 
+.btn {
+	/*background: transparent;*/
+	opacity: 0.5;
+	color: white;
+	
+}
+
 /* This just centers the header container vertically on the page. */
 .container-fluid {
 	height: 200px;

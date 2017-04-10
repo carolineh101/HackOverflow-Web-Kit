@@ -8,14 +8,24 @@ If you haven't already, create a GitHub account!
 
 ### Getting Started
 1. Fork this repository by clicking the button in the top right corner. This will copy over the starter templates and code to your own account.
-2. Click on the "Settings" tab of your newly forked repository and scroll down to the GitHub Pages section. Select "master branch" as the source. Now, when you make changes to the code, you can view the changes live on http://<your-username>.github.io/HackOverflow-Web-Kit.
+2. Click on the "Settings" tab of your newly forked repository and scroll down to the GitHub Pages section. Select "master branch" as the source. Now, when you make changes to the code, you can view the changes live on http://your-username-here.github.io/HackOverflow-Web-Kit.
 3. Go back to the "Code" tab.
 
 ### HTML
+To create the structure and content of your website, we'll need to use HTML (HyperText Markup Language). Open up index.html and click the pen icon in the corner to get started!
+X. When you're done, scroll to the bottom of the page and click the "Commit changes" button.
 
 ### CSS
+If you check your website, you'll notice that it's pretty plain at the moment. To add style, we'll need to use CSS (Cascading Style Sheets).
+1.  In the head section of index.html, add ```<link rel="stylesheet" type="text/css" href="style.css">```. This will add the stylings from our CSS file ```style.css``` to the website.
+2. Open ```style.css```.
+X. When you're done, scroll to the bottom of the page and click the "Commit changes" button.
 
 ### JavaScript
+At the moment, clicking the button you created earlier doesn't do anything. To make our website respond to user input, we'll need to use JavaScript. (We'll be using a library called jQuery to make our job easier!)
+1. Go back to index.html and add ```<script type="text/javascript" src="quote.js"></script>``` to the end of the body to link our JavaScript file ```quote.js``` to the website.
+2. Open ```quote.js```.
+X. When you're done, scroll to the bottom of the page and click the "Commit changes" button.
 
 ### Now That You're Done...
 - You can compare your code against ours by switching to the "completed" branch in the dropdown directly below the "Code" tab.

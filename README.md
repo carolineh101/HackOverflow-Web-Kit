@@ -14,20 +14,46 @@ If you don't already have one, create a GitHub account!
 ### HTML
 To create the structure and content of your website, we'll need to use HTML (HyperText Markup Language). Open up ```index.html``` and click the pen icon in the corner to get started!
 
-In HTML, you structure your content by placing it in between tags, which look like ```<this>``` (starting tag) and ```</this>``` (ending tag). Notice that after ```<!DOCTYPE html>``` (which identifies the file as an HTML file), everything is inside the ```<html>``` tag. The two main tags inside it are the ```<head>``` tag, which contains meta-information about the website, and the ```<body>``` tag, which contains its content. (There's already some code in those tags – just ignore it for now. We'll discuss what it does later!)
+In HTML, you structure your content by placing it in between tags, which look like ```<this>``` (starting tag) and ```</this>``` (ending tag). Notice that after ```<!DOCTYPE html>``` (which identifies the file as an HTML file), everything is inside the ```<html>``` tag. The two main tags inside it are the ```<head>``` tag, which contains meta-information about the website, and the ```<body>``` tag, which contains its content.
+
+You'll notice there's already some code in those tags – this allows our website to use the Bootstrap framework, which gives us some styling/formatting and certain elements (like buttons and templates) for free. We'll discuss what it specifically does later!
 
 1. Let's give our website a title! Within the ```<head>``` section, add the following code:
 ```
 <title>Be Inspired</title>
 ```
-(You can change what's inside the ```<title>``` tag to whatever you want your website's title to be.)
 
 2. Now let's add some content to our website! Within the ```<body>``` section, add the following code:
 ```
-<h2>Click the button below for inspiration!</h2>
+<p>Click the button below for inspiration!</p>
+```
+(The ```<p>``` tag represents a paragraph of text.)
+
+3. Next, let's place a button (provided by Bootstrap) for the user to click after the paragraph. In order to use the  button, we have to also identify its ```class```es so Bootstrap knows what kind of button it is. In this case, we want it to have default styling but to be large:
+```
+<button class="btn btn-default btn-lg">Be Inspired</button>
+```
+Notice that the classes are separated by spaces.
+
+4. Let's give the paragraph and the button ```id```s as well so we can identify them later.
+```
+<p id="quote">Click the button below for inspiration!</p>
+<button class="btn btn-default btn-lg" id="changeQuote">Be Inspired</button>
 ```
 
-X. When you're done, scroll to the bottom of the page and click the "Commit changes" button.
+5. ```<div>```s define sections of a website.
+
+Your code should now look like this inside the ```<body>``` section:
+```
+<div class="container-fluid">
+  <div class="header">
+    <p id="quote">Click the button below for inspiration!</p>
+    <button class="btn btn-default btn-lg" id="changeQuote">Be Inspired</button>
+  </div>
+</div>
+```
+
+6. When you're done, scroll to the bottom of the page and click the "Commit changes" button.
 
 ### CSS
 If you check your website, you'll notice that it's pretty plain at the moment. To add style, we'll need to use CSS (Cascading Style Sheets).

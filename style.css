@@ -6,11 +6,8 @@ body {
 	background-position: top;
 	text-align: center;
 	color: white; /* Text color. */
-	font-family: 'Avenir', sans-serif; /* Font: sans-serif included in case browser doesn't support first option. */
-}
-
-h2 {
 	font-size: 40px;
+	font-family: 'Avenir', sans-serif; /* Font: sans-serif included in case browser doesn't support first option. */
 }
 
 .btn {
@@ -20,7 +17,7 @@ h2 {
 }
 
 /* This just centers the header container vertically on the page. */
-.container-fluid {
+.header {
 	height: 200px;
 	width: 100%;
 	

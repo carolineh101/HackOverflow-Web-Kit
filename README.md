@@ -76,9 +76,34 @@ $('#changeQuote').on('click', function (e) {
 })
 ```
 
-What this translates to in plain English is "When the element with the id ```changeQuote``` (here, our button) is clicked, execute the function inside the curly braces."
+What this translates to in plain English is "When the element with the id ```changeQuote``` (here, our button) is clicked, execute the function inside the curly braces." We're now going to write this function to display a random quote. Let's first declare the variables we'll be using (an array of quotes and the number of quotes):
+```
+var quotes = [];
+var numQuotes = 5;
+```
 
-6. When you're done, scroll to the bottom of the page and click the "Commit changes" button.
+3. Now, let's add (or in JavaScript, ```push```) quotes to our array. While the quotes will be formatted as strings, they'll ultimately end up being *inserted* into ```index.html``` as HTML code between the ```<p>``` tags. This means we can do handy things like include tags in the string itself (here, we use ```<br>``` to insert a line break). Here are a few examples for inspiration (feel free to pick your own, and remember to include the escape character ```\``` before apostrophes and double quotes!):
+```
+quotes.push('\"A ship in port is safe, but that is not what ships are for. Sail out to sea and do new things.\"' + '<br>' + '– Grace Hopper');
+quotes.push('\"Life is not easy for any of us. But what of that? We must have perseverance and above all confidence in ourselves. We must believe that we are gifted for something and that this thing must be attained.\"' + '<br>' + '—  Marie Curie');
+quotes.push('\"If people don\'t agree with you, the important thing is to listen to them. But if you\'ve listened to them carefully and you still think that you\'re right, then you must have the courage of your convictions.\"' + '<br>' + '– Jane Goodall');
+quotes.push('\"If you know you are on the right track, if you have this inner knowledge, then nobody can turn you off... no matter what they say.\"' + '<br>' + '– Barbara McClintock');
+quotes.push('\"Forget this world and all its troubles and if possible its multitudinous Charlatans-- everything in short but the Enchantress of Numbers.\"' + '<br>' + '– Ada Lovelace');
+```
+
+4. Next, let's create a variable which will give us the index of a random quote in the array.
+```
+var randNum = Math.floor(Math.random() * (numQuotes));
+```
+
+5. Finally, we want to insert the random quote into the ```<p>``` tag of ```index.html```. This is where our use of ```id```s comes in handy – we can just find the correct element to insert the quote into and replace what's between it with our quote!
+```
+document.getElementById("quote").innerHTML = quotes[randNum];
+```
+
+(Translation: Take ```index.html```, find the element with the ```id``` ```quote```, and replace what's between its tags with the quote at index ```randNum```.)
+
+6. When you're done, scroll to the bottom of the page and click the "Commit changes" button. Congratulations, you've just built a website!
 
 ### Now That You're Done...
 - You can compare your code against ours by switching to the "completed" branch in the dropdown directly below the "Code" tab.

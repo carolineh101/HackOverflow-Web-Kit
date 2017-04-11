@@ -60,9 +60,32 @@ If you check your website, you'll notice that it's pretty plain at the moment. T
 
 1.  In the head section of ```index.html```, add ```<link rel="stylesheet" type="text/css" href="style.css">```. This will add the stylings from our CSS file ```style.css``` (linked via ```href```) to the website.
 
-2. Open ```style.css```. You'll notice that
+2. Open ```style.css```. You'll notice that the basic format of the code is
+```
+element {
+  property: value;
+  another-property: another-value;
+}
+```
 
-6. When you're done, scroll to the bottom of the page and click the "Commit changes" button.
+A ```.``` before the element, like ```.btn```, means the element is a ```class``` (and the styling will affect all instances of that class). Though we don't use it here, a ```#``` before it means it's an ```id```.
+
+3. While properties are fairly self-explanatory (you can find references [here](https://www.w3schools.com)), some may require a bit more explanation:
+
+**body**
+- Overview: sets background image to cover screen and stay fixed despite scrolling; sets text alignment, color, font, and size.
+- ```background: url("background.jpg")``` sets the background image to ```background.jpg``` (another file in this repository), but you can also replace it with a URL of an image or upload your own image to the repository to use.
+- ```font-family: 'Avenir', sans-serif``` sets the font to Avenir if the font is available (sans-serif acts as a backup).
+
+**.btn**
+- ```#FFB90F``` is the hex value for goldenrod (the background color of the button).
+
+**.header**
+- Overview: essentially centers the header (quote + button) vertically on the page.
+
+4. Currently, the CSS file is wrapped in a comment (```/* code */```). Delete the comment symbols to activate the CSS!
+
+5. When you're done, scroll to the bottom of the page and click the "Commit changes" button.
 
 ### JavaScript
 At the moment, clicking the button you created earlier doesn't do anything. To make our website respond to user input, we'll need to use JavaScript. (We'll be using a library called jQuery to make our job easier!)
@@ -107,6 +130,7 @@ document.getElementById("quote").innerHTML = quotes[randNum];
 
 ### Now That You're Done...
 - You can compare your code against ours by switching to the "completed" branch in the dropdown directly below the "Code" tab.
+- [w3schools](https://www.w3schools.com) provides handy references for elements in HTML and CSS.
 - Check out more things you can do with Bootstrap [here](http://getbootstrap.com).
 - Want to learn more about HTML, CSS, or JavaScript? [Codecademy](https://www.codecademy.com) offers more in-depth tutorials on them, as well as JavaScript frameworks like Angular and React.
 - Interested in taking a class on web dev in the future? Sign up for CS 142 or CS 193X!

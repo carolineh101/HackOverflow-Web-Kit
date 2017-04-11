@@ -7,25 +7,21 @@ body {
 	background-position: top;
 	text-align: center;
 	color: white;
+	font-size: 40px;
 	font-family: 'Avenir', sans-serif;
 }
 
-p {
-	font-size: 40px;
-}
-
 .btn {
-	background-color: #FFB90F;
+	background-color: #FFB90F;/
 	color: white;
 	
 }
 
-.container-fluid {
+.header {
 	height: 200px;
 	width: 100%;
-	
 	position: absolute;
-	top: 0;
+	top:0;
 	bottom: 0;
 	left: 0;
 	right: 0;

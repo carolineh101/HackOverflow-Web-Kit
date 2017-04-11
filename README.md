@@ -35,15 +35,13 @@ You'll notice there's already some code in those tags – this allows our websit
 ```
 Notice that the classes are separated by spaces.
 
-4. Let's give the paragraph and the button ```id```s as well so we can identify them later.
+4. ```id```s, unlike classes, represent and identify *specific* instances of particular elements. (Think of them as HTML's version of variable names!) We'll give the paragraph and the button ```id```s so our JavaScript code will know what elements to manipulate later. Your code should now look like this:
 ```
 <p id="quote">Click the button below for inspiration!</p>
 <button class="btn btn-default btn-lg" id="changeQuote">Be Inspired</button>
 ```
 
-5. ```<div>```s define sections of a website.
-
-Your code should now look like this inside the ```<body>``` section:
+5. ```<div>```s define sections of a website. Bootstrap offers some handy styling for certain classes of ```<div>```s, so we'll be using them here. Your code should now look like this inside the ```<body>``` section:
 ```
 <div class="container-fluid">
   <div class="header">
@@ -53,25 +51,34 @@ Your code should now look like this inside the ```<body>``` section:
 </div>
 ```
 
+Here, ```container-fluid``` makes the webpage full-width, and ```header``` (which is inside the container) groups together the paragraph and button into one section.
+
 6. When you're done, scroll to the bottom of the page and click the "Commit changes" button.
 
 ### CSS
-If you check your website, you'll notice that it's pretty plain at the moment. To add style, we'll need to use CSS (Cascading Style Sheets).
+If you check your website, you'll notice that it's pretty plain at the moment. To add stylings to elements of our website, we'll need to use CSS (Cascading Style Sheets).
 
-1.  In the head section of ```index.html```, add ```<link rel="stylesheet" type="text/css" href="style.css">```. This will add the stylings from our CSS file ```style.css``` to the website.
+1.  In the head section of ```index.html```, add ```<link rel="stylesheet" type="text/css" href="style.css">```. This will add the stylings from our CSS file ```style.css``` (linked via ```href```) to the website.
 
-2. Open ```style.css```.
+2. Open ```style.css```. You'll notice that
 
-X. When you're done, scroll to the bottom of the page and click the "Commit changes" button.
+6. When you're done, scroll to the bottom of the page and click the "Commit changes" button.
 
 ### JavaScript
 At the moment, clicking the button you created earlier doesn't do anything. To make our website respond to user input, we'll need to use JavaScript. (We'll be using a library called jQuery to make our job easier!)
 
 1. Go back to ```index.html``` and add ```<script type="text/javascript" src="quote.js"></script>``` to the end of the body to link our JavaScript file ```quote.js``` to the website.
 
-2. Open ```quote.js```.
+2. Open ```quote.js```. You'll notice it currently looks like this:
+```
+$('#changeQuote').on('click', function (e) {
 
-X. When you're done, scroll to the bottom of the page and click the "Commit changes" button.
+})
+```
+
+What this translates to in plain English is "When the element with the id ```changeQuote``` (here, our button) is clicked, execute the function inside the curly braces."
+
+6. When you're done, scroll to the bottom of the page and click the "Commit changes" button.
 
 ### Now That You're Done...
 - You can compare your code against ours by switching to the "completed" branch in the dropdown directly below the "Code" tab.
